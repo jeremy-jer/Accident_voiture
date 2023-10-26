@@ -4,3 +4,4 @@ numpy
 altair
 requests
 folium
+matplotlib
