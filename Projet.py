@@ -7,8 +7,6 @@ from PIL import Image
 import altair as alt
 import os
 import time 
-import requests
-from bs4 import BeautifulSoup
 import folium
 from folium.plugins import HeatMap
 plt.rcParams['figure.max_open_warning'] = 100  # Définir le nombre maximal de figures à 50 
