@@ -5,5 +5,5 @@ altair
 requests
 folium
 matplotlib
-beautifulsoup4
+
 
