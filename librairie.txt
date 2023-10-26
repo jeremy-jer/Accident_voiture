@@ -1,0 +1,10 @@
+streamlit 
+pandas
+numpy 
+matplotlib
+altair 
+os
+time 
+requests
+folium
+folium
