@@ -16,8 +16,9 @@ plt.rcParams['figure.max_open_warning'] = 100  # Définir le nombre maximal de f
 
 try:
     noms_images = os.listdir(dossier_images)
-except FileNotFoundError as e:
-    print(f"Le dossier spécifié ({dossier_images}) n'a pas pu être trouvé.")
+except NameError as e:
+    print("Le nom 'dossier_images' n'est pas défini.")
+
 
 
 
