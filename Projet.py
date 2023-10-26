@@ -14,7 +14,10 @@ from folium.plugins import HeatMap
 plt.rcParams['figure.max_open_warning'] = 100  # Définir le nombre maximal de figures à 50 
 
 
-
+try:
+    noms_images = os.listdir(dossier_images)
+except FileNotFoundError as e:
+    print(f"Le dossier spécifié ({dossier_images}) n'a pas pu être trouvé.")
 
 
 
