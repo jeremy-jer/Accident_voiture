@@ -7,15 +7,13 @@ from PIL import Image
 import altair as alt
 import os
 import time 
+import requests
+from bs4 import BeautifulSoup
 import folium
 from folium.plugins import HeatMap
 plt.rcParams['figure.max_open_warning'] = 100  # Définir le nombre maximal de figures à 50 
 
 
-try:
-    noms_images = os.listdir(dossier_images)
-except NameError as e:
-    print("Le nom 'dossier_images' n'est pas défini.")
 
 
 
@@ -142,23 +140,8 @@ pourcentage_mort_des_personnes_avec_secu_de_plus_de_40_ans = round((nombre_perso
 # --------------------------------------------------------------------------------------------------------------
 # Inserer l'image 
 
-# Chemin du dossier contenant les images
-dossier_images = "C:\\Users\\jseje\\Documents\\Data_visua\\image_projet"
-
-# Liste des noms de fichiers d'images car listdir = avoir les noms de tout ce qui est présent ds le dossier image
-noms_images = os.listdir(dossier_images)
-
-for nom_image in noms_images:
-    # Chemin complet de l'image pour qu'il soit compatible pour l'afficher 
-    # "C:\\Users\\jseje\\Documents\\Data_visua\\image_projet" et nom_image est "mon_image.jpg", 
-    # alors chemin_image sera "C:\\Users\\jseje\\Documents\\Data_visua\\image_projet\\mon_image.jpg".
-    chemin_image = os.path.join(dossier_images, nom_image)
-    
-    # Ouvre l'image
-    image = Image.open(chemin_image)
-    
-    # Affiche l'image
-    st.image(image, caption=nom_image, use_column_width=True)
+image = Image.open('image.jpg')
+st.image(image, caption="Acccident de voiture")
 
 # titre de la page web
 st.markdown("<h1 style='color: black;'>Les accidents de voiture </h1>", unsafe_allow_html=True)
